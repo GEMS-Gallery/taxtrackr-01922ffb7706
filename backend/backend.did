@@ -6,7 +6,7 @@ type TaxPayer =
    tid: text;
  };
 service : {
-  addTaxPayer: (text, text, text, text) -> ();
+  addTaxPayer: (TaxPayer) -> ();
   getAllTaxPayers: () -> (vec TaxPayer) query;
   searchTaxPayer: (text) -> (opt TaxPayer) query;
 }

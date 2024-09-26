@@ -9,7 +9,7 @@ export interface TaxPayer {
   'firstName' : string,
 }
 export interface _SERVICE {
-  'addTaxPayer' : ActorMethod<[string, string, string, string], undefined>,
+  'addTaxPayer' : ActorMethod<[TaxPayer], undefined>,
   'getAllTaxPayers' : ActorMethod<[], Array<TaxPayer>>,
   'searchTaxPayer' : ActorMethod<[string], [] | [TaxPayer]>,
 }

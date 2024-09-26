@@ -6,7 +6,7 @@ export const idlFactory = ({ IDL }) => {
     'firstName' : IDL.Text,
   });
   return IDL.Service({
-    'addTaxPayer' : IDL.Func([IDL.Text, IDL.Text, IDL.Text, IDL.Text], [], []),
+    'addTaxPayer' : IDL.Func([TaxPayer], [], []),
     'getAllTaxPayers' : IDL.Func([], [IDL.Vec(TaxPayer)], ['query']),
     'searchTaxPayer' : IDL.Func([IDL.Text], [IDL.Opt(TaxPayer)], ['query']),
   });
